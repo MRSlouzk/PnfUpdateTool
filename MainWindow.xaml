@@ -5,8 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PnfUpdateTool"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="PnfUpdateTool" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="137*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content=" 需要转换的Pnf文件路径" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox 
+            Grid.ColumnSpan="2" 
+            HorizontalAlignment="Left" 
+            Margin="217,14,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="430" 
+            FontSize="16" 
+            AutomationProperties.Name="ImportAddressBox"
+            Name="ImportAddressBox" IsEnabled="False"/>
+        <Button Grid.Column="1" Content="浏览" HorizontalAlignment="Left" Margin="428,13,0,0" VerticalAlignment="Top" FontSize="16" Width="71" Click="Button_Click" Name="Button1"/>
+        <Label Content="游戏根目录" HorizontalAlignment="Left" Margin="57,45,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox 
+            Grid.ColumnSpan="2" 
+            HorizontalAlignment="Left" 
+            Margin="217,49,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="430" 
+            FontSize="16" 
+            AutomationProperties.Name="ImportAddressBox"
+            Name="GameAddressBox" IsEnabled="False"/>
+        <Button Grid.Column="1" Content="浏览" HorizontalAlignment="Left" Margin="428,48,0,0" VerticalAlignment="Top" FontSize="16" Width="71" Click="Button2_Click" Name="Button2"/>
+        <Label Content="SDK路径" HorizontalAlignment="Left" Margin="65,80,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox 
+            Grid.ColumnSpan="2" 
+            HorizontalAlignment="Left" 
+            Margin="217,84,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="430" 
+            FontSize="16" 
+            AutomationProperties.Name="ImportAddressBox"
+            Name="SdkAddressBox" IsEnabled="False"/>
+        <Button Grid.Column="1" Content="浏览" HorizontalAlignment="Left" Margin="428,83,0,0" VerticalAlignment="Top" FontSize="16" Width="71" Click="Button3_Click" Name="Button3"/>
+        <Button Grid.Column="1" Content="开始" HorizontalAlignment="Left" Margin="408,306,0,0" VerticalAlignment="Top" FontSize="36" Height="54" Width="110" Click="Button4_Click"/>
+        <CheckBox x:Name="CheckBox1" Content="改模文件" HorizontalAlignment="Center" VerticalAlignment="Center"
+                  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Margin="36,173,0,0"  FontSize="24" Checked="CheckBox_Checked" Unchecked="CheckBox_UnChecked"/>
+        <CheckBox x:Name="CheckBox2" Content="发光模型" HorizontalAlignment="Left" VerticalAlignment="Top"
+                  HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Margin="86,333,0,0"  FontSize="24" Checked="CheckBox2_Checked" Unchecked="CheckBox2_UnChecked"/>
 
     </Grid>
 </Window>
